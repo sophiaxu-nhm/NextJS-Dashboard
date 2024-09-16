@@ -12,6 +12,12 @@ import {
 } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Home',
+};
+
 export default async function Page() {
   const revenue = await fetchRevenue();
 const latestInvoices  = await fetchLatestInvoices();
